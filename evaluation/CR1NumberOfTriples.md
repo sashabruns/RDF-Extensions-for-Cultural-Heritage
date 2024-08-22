@@ -358,6 +358,25 @@ GRAPH :graph4 {
     :location :street4 ;
     :validIn "1940" .
 
+
+#Singleton Property
+
+:livesIn_1908 rdf:singletonPropertyOf :livesIn ;
+    :validIn "1908" .
+
+:livesIn_1910 rdf:singletonPropertyOf :livesIn ;
+    :validIn "1910" .
+
+:livesIn_1921 rdf:singletonPropertyOf :livesIn ;
+    :validIn "1921" .
+
+:livesIn_1940 rdf:singletonPropertyOf :livesIn ;
+    :validIn "1940" .
+
+:person1 :livesIn_1908 :street1 .
+:person1 :livesIn_1910 :street2 .
+:person1 :livesIn_1921 :street3 .
+:person1 :livesIn_1940 :street4 .
 ```
 
 
