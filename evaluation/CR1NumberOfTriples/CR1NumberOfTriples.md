@@ -4,7 +4,9 @@ To assess the number of triples utilized by each modeling approach, a toy exampl
 ```
 @prefix : <http://example.org/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+```
 
+```
 #tRDF:
 
 :statement1 rdf:subject :street1 ;
