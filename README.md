@@ -1,8 +1,8 @@
 # Practical Perspectives on Representation of Time and Temporality in Cultural Heritage Knowledge Graphs: an Application-based Survey
-**Abstract** <br>
+## **Abstract** <br>
 Our culture, history and world are in constant motion, continuously shaped by the flow of time, evolving narratives, and shifting relationships. Capturing this temporal complexity within cultural heritage (CH) knowledge graphs is essential for preserving the dynamic nature of human heritage. However, standard RDF predicates fail to effectively model the temporal aspects of cultural data, such as changing facts, evolving relationships, and temporal concepts. For over two decades, numerous attempts have been made to extend RDF to incorporate temporal aspects, with approaches differing in their methods and capabilities. However, there remains a lack of clear guidelines on which approach to use, and what the consequences of choosing one method over another might be. To address this gap, this survey provides a comprehensive evaluation of several RDF extensions used in practice from the perspective of CH requirements. By analyzing real-world CH use cases, key temporal needs are identified and evaluation criteria tailored to the unique challenges of CH data are developed. Each approach is assessed against these criteria to determine its effectiveness in modeling temporal data, and a scenario-based framework is proposed to guide CH practitioners in selecting the most suitable extension for their specific needs. This work not only enhances temporal data modeling in CH but also contributes to establishing best practices in the field.
 
-**Contents**
+## **Contents**
 This page aims at providing additional materials used throughout the research on the journal paper **"Practical Perspectives on Representation of Time and Temporality in Cultural Heritage Knowledge Graphs: an Application-based Survey"**
 
 - **Paper**: To be published
