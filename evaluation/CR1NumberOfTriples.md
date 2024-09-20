@@ -7,9 +7,9 @@ To assess the number of triples utilized by each modeling approach, a toy exampl
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 ```
 
-```
-#tRDF:
 
+**tRDF:**
+```
 :statement1 rdf:subject :street1 ;
     rdf:predicate rdfs:label ;
     rdf:object "Roßmarkt" ;
@@ -19,24 +19,26 @@ To assess the number of triples utilized by each modeling approach, a toy exampl
     rdf:predicate rdfs:label ;
     rdf:object "Adlerstraße" ;
     :validIn "[1809, now]" .
+```
 
-#RDF*:
-
+**RDF-star:**
+```
 <<:street1 rdfs:label "Roßmarkt">> :validIn "[0,1809]" .
 <<:street1 rdfs:label "Adlerstraße">> :validIn "[1809, now]" .
+```
 
-
-#Named Graphs:
-
+**Named Graphs:**
+```
 GRAPH :graph1 {
   :street1 rdfs:label "Roßmarkt" .}
 GRAPH :graph2 {
   :street1 rdfs:label "Adlerstraße" .}
 :graph1 :validIn "[0,1809]" .
 :graph2 :validIn "[1809, now]" .
+```
 
-#4D Fluents:
-
+**4D Fluents:**
+```
 :street1_0_1809 rdfs:label "Roßmarkt" ;
     :validIn "[0,1809]" ;
     :timeSliceOf :street1 .
@@ -44,10 +46,9 @@ GRAPH :graph2 {
 :street1_1809_present rdfs:label "Adlerstraße" ;
     :validFrom :validIn "[1809, now]" ;
     :timeSliceOf :street1 .
-
-
-#Singleton Property:
-
+```
+**Singleton Property:**
+```
 :label_0_1809 rdf:singletonPropertyOf rdfs:label ;
     :validIn "[0,1809]" .
 
@@ -56,10 +57,10 @@ GRAPH :graph2 {
 
 :street1 :label_0_1809 "Roßmarkt" .
 :street1 :label_1809_present "Adlerstraße" .
+```
 
-
-#N-ary:
-
+**N-ary:**
+```
 :street1_label1 :appliesTo :street1 ;
     :streetName "Roßmarkt" ;
     :validIn "[1809, now]" .
@@ -74,9 +75,9 @@ Examining the representation of only one street provides a vision how each appro
 ```
 @prefix : <http://example.org/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-
-#Named Graphs 
-
+```
+**Named Graphs:**
+```
 GRAPH :graph1 {
   :street1 rdfs:label "Roßmarkt" .
   :street2 rdfs:label "Zisselgasse" .
@@ -92,9 +93,9 @@ GRAPH :graph2 {
   :street4 rdfs:label "Äussere Laufer-Gasse" .
 }
 :graph2 :validIn "[1809, now]" .
-
-#tRDF:
-
+```
+**tRDF:**
+```
 :statement1 rdf:subject :street1 ;
     rdf:predicate rdfs:label ;
     rdf:object "Roßmarkt" ;
@@ -134,10 +135,9 @@ GRAPH :graph2 {
     rdf:predicate rdfs:label ;
     rdf:object "Äussere Laufer-Gasse" ;
     :validIn "[1809, now]" .
-
-
-#RDF*:
-
+```
+**RDF-star:**
+```
 <<:street1 rdfs:label "Roßmarkt">> :validIn "[0,1809]" .
 <<:street1 rdfs:label "Adlerstraße">> :validIn "[1809, now]" .
 
@@ -149,9 +149,9 @@ GRAPH :graph2 {
 
 <<:street4 rdfs:label "Spiegelgasse">> :validIn "[0,1809]" .
 <<:street4 rdfs:label "Äussere Laufer-Gasse">> :validIn "[1809, now]" .
-
-#4D Fluents:
-
+```
+**4D Fluents:**
+```
 :street1_0_1809 rdfs:label "Roßmarkt" ;
     :validIn "[0,1809]" ;
     :timeSliceOf :street1 .
@@ -183,10 +183,10 @@ GRAPH :graph2 {
 :street4_1809_present rdfs:label "Äussere Laufer-Gasse" ;
     :validIn "[1809, now]" ;
     :timeSliceOf :street4 .
+```
+**Singleton Property:**
 
-#Singleton Property:
-
-
+```
 :label_0_1809 rdf:singletonPropertyOf rdfs:label ;
     :validIn "[0,1809]" .
 
@@ -222,9 +222,9 @@ GRAPH :graph2 {
 
 :street4 :label_0_1809_4 "Spiegelgasse" .
 :street4 :label_1809_present_4 "Äussere Laufer-Gasse" .
-
-#N-ary:
-
+```
+**N-ary:**
+```
 :street1_label1 :appliesTo :street1 ;
     :streetName "Roßmarkt" ;
     :validIn "[0,1809]" .
@@ -258,11 +258,67 @@ GRAPH :graph2 {
     :validIn "[1809, now]" .
 ```
 ## Example 3: Number of Triples for Temporal Fact Annotation. 
-To explore the impact of using entities instead of literals, further scenarios were considered, where the triples involve entities, such as when annotating temporal facts
+To explore the impact of using entities instead of literals, further scenarios were considered, where the triples involve entities, such as when annotating temporal facts such as that a person and their address in some specific period.
 
 ```
+@prefix : <http://example.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+```
+**Named Graphs:**
 
-#Named Graphs
+```
+GRAPH :graph1 {
+  :person1 :livesIn :street1 .
+}
+:graph1 :validIn "1908" .
+```
+**tRDF**
+```
+:statement1 rdf:subject :person1 ;
+    rdf:predicate :livesIn ;
+    rdf:object :street1 ;
+    :validIn "1908" .
+```
+**RDF-star**
+```
+<<:person1 :livesIn :street1>> :validIn "1908" .
+```
+**4D fluents**
+```
+:person1_1908 :livesIn :street1_1908 ;
+    :validIn "1908" ;
+    :timeSliceOf :person1 .
+
+:street1_1908 :validIn "1908" ;
+    :timeSliceOf :street1 .
+```
+**N-ary Relations**
+```
+:person_location1 :appliesTo :person1 ;
+    :location :street1 ;
+    :validIn "1908" .
+
+```
+**Singleton Property**
+```
+:livesIn_1908_1940 rdf:singletonPropertyOf :livesIn ;
+    :validIn "1908" .
+
+:person1 :livesIn_1908 :street1 .
+```
+
+## Example 4: Number of Triples for Temporal Fact Annotation. 
+Similarly, to explore how each approach scales when more data is added, the toy example 3 was extended towards annotation of 4 facts - a person and their addresses over time. 
+
+```
+@prefix : <http://example.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+```
+
+**Named Graphs:**
+```
 GRAPH :graph1 {
   :person1 :livesIn :street1 .
 }
@@ -282,8 +338,9 @@ GRAPH :graph4 {
   :person1 :livesIn :street4 .
 }
 :graph4 :validIn "1940" .
-
-#tRDF
+```
+**tRDF**
+```
 :statement1 rdf:subject :person1 ;
     rdf:predicate :livesIn ;
     rdf:object :street1 ;
@@ -303,16 +360,16 @@ GRAPH :graph4 {
     rdf:predicate :livesIn ;
     rdf:object :street4 ;
     :validIn "1940" .
-
-#RDF*
-
+```
+**RDF-star**
+```
 <<:person1 :livesIn :street1> :validIn "1908"> .
 <<:person1 :livesIn :street2> :validIn "1910"> .
 <<:person1 :livesIn :street3> :validIn "1921"> .
 <<:person1 :livesIn :street4> :validIn "1940"> .
-
-#4D fluents
-
+```
+**4D fluents**
+```
 :person1_1908 :livesIn :street1_1908 ;
     :validIn "1908" ;
     :timeSliceOf :person1 .
@@ -340,9 +397,9 @@ GRAPH :graph4 {
 
 :street4_1940 :validIn "1940" ;
     :timeSliceOf :street4 .
-
-#N-ary Relations
-
+```
+**N-ary Relations**
+```
 :person_location1 :appliesTo :person1 ;
     :location :street1 ;
     :validIn "1908" .
@@ -359,9 +416,9 @@ GRAPH :graph4 {
     :location :street4 ;
     :validIn "1940" .
 
-
-#Singleton Property
-
+```
+**Singleton Property**
+```
 :livesIn_1908 rdf:singletonPropertyOf :livesIn ;
     :validIn "1908" .
 
