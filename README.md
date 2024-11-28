@@ -21,3 +21,5 @@ In case of reusing the materials, please reference us:
   url          = {https://github.com/sashabruns/RDF-Extensions-for-Cultural-Heritage.git}
 }
 ```
+## License
+This project is licensed under the [MIT License](LICENSE).
