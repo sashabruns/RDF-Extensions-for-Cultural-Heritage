@@ -6,7 +6,7 @@ Our culture, history and world are in constant motion, continuously shaped by th
 This page aims at providing additional materials used throughout the research on the journal paper **"Temporal Modeling in Cultural Heritage Knowledge Graphs: Use Cases, Requirements, Evaluation, and Decision Support"**
 
 - **Paper**: To be published
-- **[user_study.pdf](https://github.com/sashabruns/RDF-Extensions-for-Cultural-Heritage/blob/667e7b88b0f6101322615c6e00064c8adc4b139a/user_study.pdf)**: An instance of the user study performed during the research. To participate in the user study: https://forms.gle/KCEUdxdSbpyu49YD8
+- **[user_study.pdf](https://github.com/sashabruns/RDF-Extensions-for-Cultural-Heritage/blob/667e7b88b0f6101322615c6e00064c8adc4b139a/user_study.pdf)**: An instance of the user study performed during the research. **[Participate in the user study!(https://forms.gle/KCEUdxdSbpyu49YD8)]**
 - **[figures](https://github.com/sashabruns/RDF-Extensions-for-Cultural-Heritage/tree/3e58fcaab4316202d2a496a21e3aca77fb77a071/figures)**: A directory containing all visualizations used in the paper.
 - **[CR1_number_of_triples.md](https://github.com/sashabruns/RDF-Extensions-for-Cultural-Heritage/blob/667e7b88b0f6101322615c6e00064c8adc4b139a/CR1_number_of_triples.md)**: Contains examples that support the discussion in Section 5.1.
 - **[CR7_survey_statistics.ipynb](https://github.com/sashabruns/RDF-Extensions-for-Cultural-Heritage/blob/667e7b88b0f6101322615c6e00064c8adc4b139a/CR7_survey_statistics.ipynb)**: A Jupyter notebook that supports the discussion in Section 5.7 and provides additional statistics and insights from the user study conducted.
