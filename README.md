@@ -14,12 +14,15 @@ This page aims at providing additional materials used throughout the research on
 
 In case of reusing the materials, please reference us:
 ```
-@unpublished{bruns2024,
-  author       = {Bruns, Oleksandra and Waitelonis, Jörg and Pan, Jeff Z and Sack, Harald},
-  title        = {Temporal Modeling in Cultural Heritage Knowledge Graphs: Use Cases, Requirements, Evaluation, and Decision Support},
-  year         = {2024},
-  note         = {to be published},
-  url          = {https://github.com/sashabruns/RDF-Extensions-for-Cultural-Heritage.git}
+@article{bruns2026temporal,
+  author  = {Bruns, Oleksandra and Waitelonis, Jörg and Pan, Jeff Z. and Sack, Harald},
+  title   = {{Temporal Modeling in Cultural Heritage Knowledge Graphs: Use Cases, Requirements, Evaluation, and Decision Support}},
+  journal = {Transactions on Graph Data and Knowledge},
+  year    = {2026},
+  volume  = {4},
+  number  = {2},
+  pages   = {2:1--2:46},
+  note    = {to be published}
 }
 ```
 ## License
